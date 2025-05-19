@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "52818073-5013-4db5-b7d9-8e54f08b863e",
+		"name": "Stugart Frag Das Getesez Chat",
+		"description": "Collection for Stugart Frag Das Getesez Chat API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45083305",
+		"_collection_link": "https://stugart-frag-das-getesez.postman.co/workspace/Stugart-Frag-Das-Getesez-Works~a2d5179a-22bf-4f55-8006-50a9b69ce6fd/collection/43100081-52818073-5013-4db5-b7d9-8e54f08b863e?action=share&source=collection_link&creator=45083305"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password123\",\n    \"first_name\": \"Test\",\n    \"last_name\": \"User\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/logout/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Auth",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/check-auth",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"check-auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/info",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File Management",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/path/to/your/file.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/upload-file/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"upload-file",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process Document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/process-document/{{filename}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"process-document",
+								"{{filename}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Chunks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/get-all-chunks/{{file_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-all-chunks",
+								"{{file_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chunk",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/get-chunk/{{chunk_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-chunk",
+								"{{chunk_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chunk with Next",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/get-chunk-with-next/{{chunk_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-chunk-with-next",
+								"{{chunk_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Similarity Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": \"your search query\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/search/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conversations",
+			"item": [
+				{
+					"name": "Create Conversation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBcEc0QzhKVkNRWUF6Wl9ncEtqdUZWUWJzYU9OaDlzN01MaFA1b1p6d2tvIn0.eyJleHAiOjE3NDc0MDM0NTQsImlhdCI6MTc0NzM5MjY1NCwianRpIjoib25ydHJvOjNlMTA5NmUwLTczZTgtNDZiOC05ZmYyLTYxYjI1YWFiMzc1NSIsImlzcyI6Imh0dHA6Ly84NS4yMTUuMjAzLjcwOjIwMzAvcmVhbG1zL21hc3RlciIsImF1ZCI6WyJtYXN0ZXItcmVhbG0iLCJhY2NvdW50Il0sInN1YiI6IjFiZDgzZGE0LTRkOTgtNDIyNS05MTM5LTA2MDJhYmQ5YmYyMSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNvbmZpZGVudGlhbF9jbGllbnQiLCJzaWQiOiJmZjUwZGQyZS0zNjE2LTQzMzgtODA3Ni0xZTM1OTZjMTNlNmUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.j3zqLNSnro1VCvzDzp3gTITzMWcmWI3vdtPrkIp_xMOUKW9EvX1ygD3VkkpONGLBIaL2FOtRsDfUL9Tt_FDwe-QqzvwOliCRfrhRlUv65pDDbxSTJcadGkQzKEdONgylTzEZrw_MIefUFfhTNMI5z9Uso24lZUIRAnNYQR5El2fb2SZXr6-6a3n1x5HCQqb4wpxsO3WDLuxPHKKANL6MfvvNnADCe3JBCfuoaNo_TyF4HI8KufMqhzPMtrUZADZwCYhYqloY9wjlsvNFnpkeZNpIW4vS297bLL5-WsIqM5sjOYYisvPh6MuSE0qHJu4s_k_Tu8-E6r0WJMDj5RD5vQ"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/conversations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"conversations"
+							],
+							"query": [
+								{
+									"key": "file_id",
+									"value": "{{file_id}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Conversations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/conversations/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"conversations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conversation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBcEc0QzhKVkNRWUF6Wl9ncEtqdUZWUWJzYU9OaDlzN01MaFA1b1p6d2tvIn0.eyJleHAiOjE3NDczMjYwNDUsImlhdCI6MTc0NzMyNTk4NSwianRpIjoib25ydHJvOjhkNTM4MWRmLThlMjYtNDUzMS05ZWE4LTg3NzAwMmJlNjk5NCIsImlzcyI6Imh0dHA6Ly84NS4yMTUuMjAzLjcwOjIwMzAvcmVhbG1zL21hc3RlciIsImF1ZCI6WyJtYXN0ZXItcmVhbG0iLCJhY2NvdW50Il0sInN1YiI6IjFiZDgzZGE0LTRkOTgtNDIyNS05MTM5LTA2MDJhYmQ5YmYyMSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNvbmZpZGVudGlhbF9jbGllbnQiLCJzaWQiOiJlNjlhOWI2Yi0yYzU2LTQ5ZTEtOWE2Mi1lYjU5ZmE5ZTkwZTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.jSU1RKz_FDbR5OBeRAjkGVQ9770IGJ6TUJqOzfIEPIV97JrQDFXm_KSZ_Rx2ktHIPhlqR_om2951e2DdepjySiAiVWPod2EUX0_P5pTYPl8xwfI5Qc8TMXjhm3NupoJLUbG-Lo5mhT7TNx6UbWLhL8qKiRA-GIhUfXm76XcyBiEceeGpObR1b-9AzU2yIROSJR_5iReI5p3yGtakQo4I6MHcEQ-uEUWIBq9YQ_Z3LagPwMAAAplywZHWmwYtoA6OU3usaaJ9c8ikLeQn0rCVkpiAww0NveCw6l5AglgKU39m_dmrn-h9O5OjfssikuAO8GMNmHFYSYhND3HyVER-YQ"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/conversations/{{conversation_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"conversations",
+								"{{conversation_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Conversation",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/conversations/{{conversation_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"conversations",
+								"{{conversation_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBcEc0QzhKVkNRWUF6Wl9ncEtqdUZWUWJzYU9OaDlzN01MaFA1b1p6d2tvIn0.eyJleHAiOjE3NDczMjUzMDMsImlhdCI6MTc0NzMyNTI0MywianRpIjoib25ydHJvOjQyNDNkMWY3LTJmMDctNGE3OC04OTQ4LWY3ZWQxODk3ZDg2YiIsImlzcyI6Imh0dHA6Ly84NS4yMTUuMjAzLjcwOjIwMzAvcmVhbG1zL21hc3RlciIsImF1ZCI6WyJtYXN0ZXItcmVhbG0iLCJhY2NvdW50Il0sInN1YiI6IjFiZDgzZGE0LTRkOTgtNDIyNS05MTM5LTA2MDJhYmQ5YmYyMSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNvbmZpZGVudGlhbF9jbGllbnQiLCJzaWQiOiI4YTZkYjE2NC02MWJkLTQ4ZjMtODgxNy1jNmJjYmQ0NGM5ZWIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.V3xdN9Syd3OjYsWfLqkuqG26CLOq2nRdf7QdTedaj56759FuuyH_uOH5_cMvtLsikJpFw_7hX5KoWidsRvNmdsy0n3RzFcgPRjAz9TzwMHLP59e7Qn12t3EDm0a3ID8tOKAvnj6zaxFEUIRIyRmDkGaI1UBnaMBJMwfnbXQ-D3gXqqWWOwCCxfPVUqBGjvnr0s0Bwxh1arvkTddvG4Eil5L3wqb7j-eGKuSI6PmPdkdWosWNw-hrfqESgICBQtiOhtUBPMOjJY53TKSklVOcOOLj9UERT7Jbslqvo7w6k644b9WgDFco9nHpojrekinZWNlHpwRSet8QVhOdqgxdEw"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\":\"BGB\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "message",
+									"value": "Your message here",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBcEc0QzhKVkNRWUF6Wl9ncEtqdUZWUWJzYU9OaDlzN01MaFA1b1p6d2tvIn0.eyJleHAiOjE3NDc0MTgyODcsImlhdCI6MTc0NzQwNzQ4NywianRpIjoib25ydHJvOjM5YTVlMDExLWMzY2EtNDVhMi1hMTI4LWY3ZWE1YTVjMWJjMSIsImlzcyI6Imh0dHA6Ly84NS4yMTUuMjAzLjcwOjIwMzAvcmVhbG1zL21hc3RlciIsImF1ZCI6WyJtYXN0ZXItcmVhbG0iLCJhY2NvdW50Il0sInN1YiI6IjFiZDgzZGE0LTRkOTgtNDIyNS05MTM5LTA2MDJhYmQ5YmYyMSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNvbmZpZGVudGlhbF9jbGllbnQiLCJzaWQiOiI3Zjg2YThiYS1mY2FlLTRhNTQtYjEyNy0wMjcxNzFhMDJkMGUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.nkwZNywIVTe2BmVxzyyTo2pQ7_BoFthxS6ODCgiWWSEzHD6502jUEgh4vq6e7qvslsbA8fZNjjWALGcs0UeIqEkm9f4nsEPbMoWv2ioD68vRDjUgvL5iNeuk7FfMDZt09WLSn3_RORfbDAyCqYRZtmbca7K2H6a5MciSNUogithoBgoKSjLb0NHnii3EIdcj-m7Tkr91W5S3ekvBJJ1VSKCWnXV0z7j2ugUNz48DgOTaCcmQbljGz5f-UmBHy28UW2d0oMLYQITIu6-1n8zdfIwp4jqwlfj94lms1g84viKvg1SURSrGepf4QxqwOdJV08R_oj_8s_-by7FhbIv_dw"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"conversation_id\": \"f09d3fe4-3bdd-4f1a-a823-60a7885adb10\",\n    \"file_id\": \"\",\n    \"message\": \"Mein Flug hatte Verspätung. Bekomme ich mein Geld zurück?\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/chat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chat"
+							],
+							"query": [
+								{
+									"key": "message",
+									"value": "Your message here",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Endpoint",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/admin/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/health/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"health",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://testing.frag-das-gesetz.de",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "your_access_token_here",
+			"type": "string"
+		},
+		{
+			"key": "file_id",
+			"value": "your_file_id_here",
+			"type": "string"
+		},
+		{
+			"key": "conversation_id",
+			"value": "your_conversation_id_here",
+			"type": "string"
+		},
+		{
+			"key": "chunk_id",
+			"value": "your_chunk_id_here",
+			"type": "string"
+		},
+		{
+			"key": "filename",
+			"value": "your_filename_here",
+			"type": "string"
+		}
+	]
+}

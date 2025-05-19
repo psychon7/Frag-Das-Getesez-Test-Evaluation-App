@@ -1,0 +1,108 @@
+event: start
+data: {"status": "started"}
+
+event: researching
+data: {"status": "researching"}
+
+event: topics
+data: {"topics": {"summary": "Der Flug des Benutzers hatte Versp\u00e4tung und er fragt, ob er sein Geld zur\u00fcckbekommt.", "key_points": ["Flugversp\u00e4tung", "R\u00fcckerstattung des Geldes"], "topics": ["Fluggastrechte", "Entsch\u00e4digung f\u00fcr Flugversp\u00e4tung"]}}
+
+event: rag
+data: {"status": "rag"}
+
+event: progress
+data: {"message": "Searching laws for topic 2/2"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE007405124"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/hgb/BJNR002190897.html#BJNR002190897BJNE051901377"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE012806124"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftschlichtv/BJNR382000013.html#BJNR382000013BJNE001301305"}
+
+event: progress
+data: {"message": "Searching laws for topic 1/2"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE011604305"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE003907305"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE012101301"}
+
+event: progress
+data: {"message": "Found relevant law from https://www.gesetze-im-internet.de/luftfzgg/BJNR000570959.html#BJNR000570959BJNE009200315"}
+
+event: metadata
+data: {"metadata": [{"title": "Luftverkehrsgesetz  (LuftVG) \u00a7 47 Haftung f\u00fcr Gep\u00e4cksch\u00e4den", "source": "https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE007405124"}, {"title": "Handelsgesetzbuch \u00a7 609 Vereinbarungen \u00fcber die Verj\u00e4hrung", "source": "https://www.gesetze-im-internet.de/hgb/BJNR002190897.html#BJNR002190897BJNE051901377"}, {"title": "Luftverkehrsgesetz  (LuftVG) \u00a7 72 ", "source": "https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE012806124"}, {"title": "Verordnung nach \u00a7 57c des Luftverkehrsgesetzes zur Schlichtung im Luftverkehr  (Luftverkehrsschlichtungsverordnung - LuftSchlichtV) \u00a7 11 Anrufung der Schlichtungsstelle", "source": "https://www.gesetze-im-internet.de/luftschlichtv/BJNR382000013.html#BJNR382000013BJNE001301305"}, {"title": "Luftverkehrsgesetz  (LuftVG) \u00a7 67 ", "source": "https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE011604305"}, {"title": "Luftverkehrsgesetz  (LuftVG) \u00a7 20a ", "source": "https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE003907305"}, {"title": "Luftverkehrsgesetz  (LuftVG) \u00a7 19d ", "source": "https://www.gesetze-im-internet.de/luftvg/BJNR006810922.html#BJNR006810922BJNE012101301"}, {"title": "Gesetz \u00fcber Rechte an Luftfahrzeugen \u00a7 80 ", "source": "https://www.gesetze-im-internet.de/luftfzgg/BJNR000570959.html#BJNR000570959BJNE009200315"}]}
+
+event: token
+data: {"content": "Abs"}
+
+event: token
+data: {"content": "olut! Hier ist eine detaillierte Antwort auf Ihre Frage, basierend auf den"}
+
+event: token
+data: {"content": " bereitgestellten Gesetzen und Vorschriften, formatiert auf Deutsch und in Markdown:\n\n"}
+
+event: token
+data: {"content": "### Flugverspätung und Rückerstattung – Ihre Rechte\n\nDie Frage, ob Sie bei einer Flugverspätung Ihr Geld zurückbekommen"}
+
+event: token
+data: {"content": ", lässt sich nicht pauschal beantworten. Es hängt von verschiedenen Faktoren ab, insbesondere von der Dauer der Verspätung und der Ursache.\n\n**Ges"}
+
+event: token
+data: {"content": "etzliche Grundlagen:**\n\n*   **Luftverkehrsgesetz (LuftVG):** Dieses Gesetz regelt die Rechte und Pflichten von Luftfahrtunternehmen und Fluggästen in Deutschland. Insbesondere § 47 LuftVG be"}
+
+event: token
+data: {"content": "fasst sich mit der Haftung für Schäden im Zusammenhang mit der Beförderung von Reisegepäck, kann aber indirekt auch bei Verspätungen relevant sein.\n\n*   **Handelsgesetzbuch (HGB):**"}
+
+event: token
+data: {"content": " § 609 HGB regelt Vereinbarungen über die Verjährung von Schadensersatzansprüchen.\n\n*   **Verordnung (EG) Nr. 261/2004:** Obwohl nicht direkt im bereitgestellten Kontext genannt, ist diese EU-Verordnung von"}
+
+event: token
+data: {"content": " großer Bedeutung. Sie legt Ausgleichs- und Unterstützungsleistungen für Fluggäste im Fall von Nichtbeförderung, Annullierung oder großer Verspätung fest. Da Deutschland ein Mitgliedstaat der EU ist, gilt diese Verordnung unmittelbar.\n\n**Anspruch auf Entschädigung bei Vers"}
+
+event: token
+data: {"content": "pätung:**\n\n*   **Abhängig von der Flugdistanz und Verspätungsdauer:** Nach der EU-Verordnung 261/2004 haben Sie Anspruch auf eine Entschädigung, wenn Ihr Flug eine bestimmte Verspätung erreicht hat. Die Höhe der Entschädigung"}
+
+event: token
+data: {"content": " hängt von der Flugdistanz ab:\n\n    *   250 EUR bei Flügen bis zu 1.500 km und einer Verspätung von mehr als 2 Stunden\n    *   400 EUR bei Flügen zwischen 1.500 km und 3.500 km"}
+
+event: token
+data: {"content": " und einer Verspätung von mehr als 3 Stunden\n    *   600 EUR bei Flügen über 3.500 km und einer Verspätung von mehr als 4 Stunden\n\n*   **Außergewöhnliche Umstände:** Die Fluggesellschaft ist nicht zur Zahlung einer Entschädigung"}
+
+event: token
+data: {"content": " verpflichtet, wenn die Verspätung auf „außergewöhnliche Umstände“ zurückzuführen ist, die sich nicht vermeiden ließen (z. B. Unwetter, Streiks, Sicherheitsrisiken). Technische Defekte am Flugzeug gehören in der Regel nicht dazu.\n\n**Weitere Ansprüche:**\n\n*   "}
+
+event: token
+data: {"content": "**Betreuungsleistungen:** Bei längeren Verspätungen (abhängig von der Flugdistanz, meist ab 2 Stunden) muss die Fluggesellschaft Ihnen Betreuungsleistungen anbieten (z. B. Mahlzeiten, Getränke, Hotelunterbringung bei Bedarf).\n*   **Rücktr"}
+
+event: token
+data: {"content": "itt vom Flug:** Bei einer Verspätung von mehr als 5 Stunden haben Sie das Recht, vom Flug zurückzutreten und eine Erstattung des Ticketpreises zu verlangen.\n\n**Geltendmachung Ihrer Ansprüche:**\n\n*   **Schriftliche Geltendmachung:** Setzen Sie sich"}
+
+event: token
+data: {"content": " schriftlich mit der Fluggesellschaft in Verbindung und fordern Sie die Ihnen zustehende Entschädigung.\n*   **Fristen:** Beachten Sie die Verjährungsfristen für Ihre Ansprüche. Diese können je nach Rechtsgrundlage variieren. § 609 HGB erwähnt Vereinbarungen über die"}
+
+event: token
+data: {"content": " Verjährung, die jedoch nicht zu einer unzulässigen Verkürzung der Frist führen dürfen.\n*   **Schlichtungsstelle:** Wenn die Fluggesellschaft Ihren Anspruch ablehnt oder nicht reagiert, können Sie sich an eine Schlichtungsstelle wenden. Die Luftverkehrsschlichtungsverordnung (LuftSchlicht"}
+
+event: token
+data: {"content": "V) regelt das Verfahren. § 11 LuftSchlichtV beschreibt die Anforderungen an die Anrufung der Schlichtungsstelle. Beachten Sie, dass Sie den Anspruch zunächst direkt gegenüber dem Luftfahrtunternehmen geltend gemacht haben müssen.\n\n**Wichtiger Hinweis:**\n\nDie hier gegebenen Informationen dienen"}
+
+event: token
+data: {"content": " nur der ersten Orientierung und ersetzen keine Rechtsberatung. Im Einzelfall kann es ratsam sein, sich von einem Anwalt oder einer Verbraucherberatungsstelle beraten zu lassen.\n"}
+
+event: progress
+data: {"evals": "{'answer_faithfulness': 9, 'answer_relevance': 10, 'context_relevance': 8}"}
+
+event: end
+data: {"status": "completed"}
+

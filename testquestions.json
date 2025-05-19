@@ -1,0 +1,44 @@
+{
+  "BGB": [
+    "Was steht im BGB?",
+    "Wie kommen Verträge zustande?",
+    "Wie unterscheidet man Rechtsgeschäfte von Gefälligkeiten?",
+    "Welche Rechte hat der Käufer einer mangelhaften Sache? Gibt es eine Reihenfolge der Gewährleistungsrechte?",
+    "Welche Möglichkeiten hat der Verkäufer, der die Ware bereits dem Käufer übergeben hat, wenn der Käufer den vereinbarten und fälligen Kaufpreis nicht zahlt?",
+    "K kauft bei V ein Auto zum Preis von 10.000 €, den K auch zahlt. K nimmt das Auto mit. Einige Tage später entdeckt K eine Farbabweichung an der Beifahrertür in Größe eines Eurostückes. K will das Auto zurückgeben und sein Geld zurück. Zu Recht? Begründen Sie Ihre Antwort.",
+    "Welche Fälle regelt § 181 BGB?"
+  ],
+  "Gesellschaftsrecht": [
+    "Wem steht bei einer GbR die Geschäftsführung zu?",
+    "Wie haften die Gesellschafter einer GbR für Gesellschaftsverbindlichkeiten?",
+    "Wie haftet ein oHG-Gesellschafter gegenüber den Gläubigern der oHG?",
+    "In welchem Verhältnis stehen gesellschaftsrechtlich die GbR und die oHG zueinander?",
+    "Mozart und Haydn wollen gemeinsam Bücher verkaufen. Mozart will keinesfalls mit seinem Privatvermögen haften, Haydn auch nicht. Welche Gesellschaftsform empfehlen Sie den beiden? Begründen Sie Ihre Antwort (ohne steuerliche Aspekte).",
+    "Was ist ein Sachgründungsbericht?"
+  ],
+  "Handelsrecht": [
+    "Wie kann eine Firma unter Lebenden übertragen werden?",
+    "Wer haftet bei einem Inhaberwechsel für Altverbindlichkeiten?",
+    "Wie wird eine Prokura erteilt?",
+    "Erklären Sie den Begriff \"Asset Deal\".",
+    "Erklären Sie den Begriff \"Share Deal\"."
+  ],
+  "Mietrecht": [
+    "Welche Pflichten ergeben sich aus einem Mietvertrag für den Vermieter?",
+    "Welche Pflichten ergeben sich aus dem Mietverhältnis für den Mieter?",
+    "Wie lautet die Verpflichtung des Mieters zur Durchführung von Schönheitsreparaturen, wenn dies in den AGB so festgelegt wurde?",
+    "Nennen Sie die Voraussetzungen einer wirksamen Kündigung des unbefristeten Wohnraummietvertrags!",
+    "Wann liegt ein Mangel der Mietsache vor?"
+  ],
+  "Arbeitsrecht": [
+    "Unter welchen Voraussetzungen ist eine Kündigung aus betriebsbedingten Gründen wirksam?",
+    "Wie lässt sich ein bestehender Arbeitsvertrag ändern?",
+    "Wann ist eine Weisung rechtswidrig bzw. illegal, welche Rolle spielen in diesem Zusammenhang die Grundrechte des Arbeitnehmers?"
+  ],
+  "Strafrecht": [
+    "Ab welchem Alter kann man sich strafbar machen?",
+    "Welche Rechtsmittel/Rechtsbehelfe kennt die Strafprozessordnung (StPO)?",
+    "Gelten bei Straftaten von Jugendlichen irgendwelche Besonderheiten?",
+    "Welche Vergehen haben eine Haft zur Folge bzw. für welche Straftaten muss man ins Gefängnis?"
+  ]
+}
