@@ -320,7 +320,6 @@ def main():
         with col2:
             if st.button("Cancel"):
                 st.session_state.editing_questions = False
-                st.experimental_rerun()
                 
         # Show a preview of the questions
         try:
