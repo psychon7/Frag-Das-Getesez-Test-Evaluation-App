@@ -282,7 +282,7 @@ def create_results_dataframe() -> pd.DataFrame:
     return df.fillna("")
 
 def main():
-    st.title("Legal Questions Test Evaluation App")
+    st.title("Frag Das Getesez Test Evaluation App")
     
     # Sidebar
     st.sidebar.header("Test Configuration")
