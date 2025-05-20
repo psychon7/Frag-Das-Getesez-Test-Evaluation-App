@@ -253,14 +253,22 @@ def create_results_dataframe() -> pd.DataFrame:
                 except (json.JSONDecodeError, TypeError):
                     evals = {"score": str(evals)}
             
+            # Combine all metadata into a single formatted string
+            combined_metadata = []
+            if metadata:
+                combined_metadata.append(f"Metadata: {format_metadata(metadata)}\n")
+            if evals:
+                combined_metadata.append(f"Eval Scores: {format_evals(evals)}\n")
+            if result.get("category"):
+                combined_metadata.append(f"Category: {result.get('category', '')}\n")
+            if result.get("timestamp"):
+                combined_metadata.append(f"Timestamp: {result.get('timestamp', '')}")
+                
             data.append({
                 "#": i + 1,
                 "Question": question,
                 "Response": content,
-                "Metadata": format_metadata(metadata),
-                "Eval Scores": format_evals(evals),
-                "Category": result.get("category", ""),
-                "Timestamp": result.get("timestamp", "")
+                "Metadata": "\n".join(combined_metadata).strip()
             })
             
         except Exception as e:
@@ -269,14 +277,11 @@ def create_results_dataframe() -> pd.DataFrame:
                 "#": i + 1,
                 "Question": f"Error processing question {i+1}",
                 "Response": f"Error: {str(e)}",
-                "Metadata": "",
-                "Eval Scores": "",
-                "Category": "",
-                "Timestamp": ""
+                "Metadata": "Error processing question"
             })
     
-    # Create DataFrame with consistent column order
-    columns = ["#", "Question", "Response", "Metadata", "Eval Scores", "Category", "Timestamp"]
+    # Create DataFrame with the new column order
+    columns = ["#", "Question", "Response", "Metadata"]
     df = pd.DataFrame(data, columns=columns)
     
     return df.fillna("")
